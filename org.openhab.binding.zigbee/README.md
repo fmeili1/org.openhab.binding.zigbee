@@ -219,6 +219,8 @@ The following devices have been tested by openHAB users with the binding. The ab
 | Busch-Jaeger 6735                              | Control Element (1-channel)                                  |
 | Busch-Jaeger 6735/01                           | Control Element (1-channel, battery-operated)                |
 | Busch-Jaeger 6736                              | Control Element (2-channel)                                  |
+| Dogain Smart Plug (eWeLink, SA-003-Zigbee)     | 100-240V AC, 10A smart plug                                  |
+| E-Wand, Gen. 2 Hybrid (Current Products Corp)  | Vertical blind smart wand                                    |
 | Eurotronic Spirit Thermostat                   | Radiator Thermostat                                          |
 | GE Bulbs                                       |                                                              |
 | GE Tapt Wall Switch                            | On/Off Switch                                                |
@@ -443,6 +445,9 @@ log:set info com.zsmartsystems.zigbee.dongle.ember.internal.ash
 This will log data into the standard `openhab.log` file. There is an [online log viewer](https://opensmarthouse.org/utilities/logviewer/zigbee/) available for viewing the logs.
 
 Note that logs can only show what is happening at a high level - it can't show all data exchanges between the device and the coordinator - just what the coordinator sends to the binding. For this reason it can be difficult to debug issues where devices are not joining the network, or other low level issues need resolving. In such cases a network sniffer log is required, which requires additional hardware and software.
+
+> Radio interference problems may occur and the stick may not be able to discover other ZigBee devices, if the ZigBee USB stick is located too close to e.g. a CPU (like in a mini PC, e.g. Raspberry Pi, Intel NUC, etc.) or too close to a WiFi sender or other radio transmitting devices. In this case an USB extension cord will solve these types of problems (these problems are also mentioned in other projects like e.g. at [zigbee2mqtt](https://www.zigbee2mqtt.io/how_tos/how_to_improve_network_range_and_stability.html))
+
 
 ## Known issues
 
